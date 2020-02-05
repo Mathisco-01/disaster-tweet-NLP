@@ -20,26 +20,28 @@ To make matters worse we only have about *7613* samples which makes it hard not 
 ```
 Layer (type)                 Output Shape              Param #   
 =================================================================
-embedding_1 (Embedding)      (None, 15, 100)           148900    
+embedding_13 (Embedding)     (None, 25, 500)           1863500   
 _________________________________________________________________
-bidirectional_2 (Bidirection (None, 15, 100)           60400     
+bidirectional_26 (Bidirectio (None, 25, 1000)          4004000   
 _________________________________________________________________
-bidirectional_3 (Bidirection (None, 100)               60400     
+bidirectional_27 (Bidirectio (None, 600)               3122400   
 _________________________________________________________________
-dropout_3 (Dropout)          (None, 100)               0         
+dense_44 (Dense)             (None, 1024)              615424    
 _________________________________________________________________
-dense_3 (Dense)              (None, 1024)              103424    
+dropout_29 (Dropout)         (None, 1024)              0         
 _________________________________________________________________
-dropout_4 (Dropout)          (None, 1024)              0         
+dense_45 (Dense)             (None, 512)               524800    
 _________________________________________________________________
-dense_4 (Dense)              (None, 128)               131200    
+dropout_30 (Dropout)         (None, 512)               0         
 _________________________________________________________________
-dropout_5 (Dropout)          (None, 128)               0         
+dense_46 (Dense)             (None, 128)               65664     
 _________________________________________________________________
-dense_5 (Dense)              (None, 1)                 129       
+dropout_31 (Dropout)         (None, 128)               0         
+_________________________________________________________________
+dense_47 (Dense)             (None, 1)                 129       
 =================================================================
-Trainable params: 504,453
+Total params: 10,195,917
 ```
 
 ## Results:
-Right out of the box I was able to get a test accuracy of *68%*. Not the best, but not great either considering there is a strong bias. I'm guessing that with some tweaking you could get it up to 70-75% accuracy, which is alot better!
+Right out of the box I was able to get a test accuracy of *71%*. Not the best, but not great either considering there is a strong bias. I'm guessing that with some tweaking you could get it up to 75-90% accuracy, which is alot better!
